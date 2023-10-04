@@ -24,6 +24,31 @@ function rgbToHex(rgb) {
     return `#${Number(values[0]).toString(16).padStart(2, '0')}${Number(values[1]).toString(16).padStart(2, '0')}${Number(values[2]).toString(16).padStart(2, '0')}`;
 }
 
+// nav 메뉴 클릭 시 해당되는 카테고리로 이동하는 공통 함수
+function navigateToCategory(index, category) {
+    const cate = category[index];
+    const subURL = `${window.location.pathname}#${encodeURIComponent(cate)}`;
+    window.location.href = subURL;
+    location.reload();
+}
+
+// 검색 기능 실행
+function performSearch() {
+    const searchInput = $('#srch-form');
+    const searchTerm = searchInput.val().trim();
+
+    if (searchTerm === '') return;
+
+    // 상품 데이터와 검색어 일치하는 상품 찾기
+    const matchedProduct = products.find(product => product.alt.includes(searchTerm));
+    if (matchedProduct) {
+        const productURL = `./detail.html?product_id=${matchedProduct.id}`;
+        window.location.href = productURL;
+    } else {
+        alert('검색 결과가 없습니다.');
+    }
+}
+
 $(function() {
     var gnb_swiper = new Swiper('.gnb-swiper', {
         slidesPerView: 'auto',
@@ -79,22 +104,26 @@ $(function() {
         }
     });
 
-    // nav 메뉴 클릭 시 해당되는 카테고리로 이동하는 공통 함수
-    function navigateToCategory(index, category) {
-        const cate = category[index];
-        const subURL = `${window.location.pathname}#${encodeURIComponent(cate)}`;
-        window.location.href = subURL;
-        location.reload();
-    }
+    // 검색창 입력
+    $(document).on('click', '#srch-btn', function() {
+        performSearch();
+    });
 
-    $('.menu-bottom > div').each(function(dlIndex, dl) {
-        var ddList = $(dl).find('a:not(:first-child)');
-        ddList.each(function(ddIndex, dd) {
-            $(dd).on('click', function() {
-                console.log(dlIndex); console.log(ddIndex);
+    // 검색 버튼 enter 키 입력 
+    $(document).on('keydown', '#srch-form', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    $('.menu-bottom > div').each(function(menuIndex, menuElement) {
+        var linkList = $(menuElement).find('a:not(:first-child)');
+        linkList.each(function(linkIndex, linkElement) {
+            $(linkElement).on('click', function() {
+                console.log(menuIndex); console.log(linkIndex);
                 var categoryLists = [['tab2', 'tab3', 'tab4', 'tab5'], ['tab2', 'tab3', 'tab4'], ['tab2', 'tab3'], ['tab2', 'tab3']];
-                var selectedCategories = categoryLists[dlIndex];
-                navigateToCategory(ddIndex, selectedCategories);
+                var selectedCategories = categoryLists[menuIndex];
+                navigateToCategory(linkIndex, selectedCategories);
             })
         })
     });
