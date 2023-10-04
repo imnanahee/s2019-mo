@@ -39,8 +39,7 @@ $(function() {
     // 클릭 시 메뉴 오픈
     $(document).on('click', '.menu-list img', function() {
        $('.menu-home').addClass('show');
-
-       if ($('.menu-home').hasClass('show')) $('body').css('overflow-y', 'hidden');
+       $('html, body').addClass('hidden');
     });
 
     // 버튼 클릭 시 메뉴 닫기
@@ -52,7 +51,7 @@ $(function() {
             $('.water .sub-menu').css('display', 'block');
         }, 300);
         $('.menu-home').removeClass('show');
-        $('body').css('overflow-y', '');
+        $('html, body').removeClass('hidden');
     });
 
     // 각 카테고리에 맞는 메뉴 열기

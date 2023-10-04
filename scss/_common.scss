@@ -25,6 +25,10 @@
     }
 }
 
+.hidden {
+    overflow-y: hidden;
+}
+
 h2 {
     @include h2;
 }
