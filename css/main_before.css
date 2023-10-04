@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.visual {
+  padding: 2%;
+  overflow: hidden;
+}
+
+.visual_l {
+  width: 70%;
+  float: left;
+  margin: 0 0 0 3%;
+}
+
+.visual .top li:first-child {
+  display: block;
+}
+
+.visual .top li {
+  display: none;
+}
+
+.bottom {
+  margin: 5px 0 0;
+}
+
+.bottom a {
+  display: inline-block;
+  width: 48.955%;
+  text-align: center;
+}
+
+.visual_r {
+    float: left;
+    width: 22.35%;
+    margin: 0 0 0 2%;
+}
+
+.visual_r a {
+    display: inline-block;
+    margin: 0 0 5%;
+}
+
+.visual_r a:last-child {
+    margin: 0;
+}

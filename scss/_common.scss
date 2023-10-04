@@ -1,0 +1,120 @@
+@import 'utils';
+@import 'mixin';
+@import 'header';
+@import 'footer';
+
+
+#main {
+    .swiper-pagination-bullet {
+        background: $white;
+        opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $main;
+        opacity: 0.8;
+        width: 20px;
+        border-radius: 10px;
+    }
+
+    .cell {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+h2 {
+    @include h2;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 28px;
+}
+
+.category {
+    color: #fff;
+    font-weight: 600;
+    width: 80px;
+    padding: 5px 0;
+    font-size: 0.95em;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 12px;
+    text-align: center;
+}
+
+.desc {
+    font-size: 1em;
+    line-height: 17px;
+    height: 34px;
+    word-break: keep-all;
+}
+
+.productText {
+    background-color: $white;
+    padding: 5%;
+    box-sizing: border-box;
+    border: 1px solid #f0f0f0;
+}
+
+.name {
+    @include ellipsis;
+    font-size: 1.25em;
+    line-height: 25px;
+    padding: 5px 0 3px;
+}
+
+.code {
+    color: #999;;
+}
+
+.state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+    strong {
+        background-color: $special;
+        color: $white;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 0.95em;
+
+        &:first-child {
+            border-top-left-radius: 5px;
+        }
+        
+        &:last-child {
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+.priceWrap {
+    overflow: hidden;
+    margin-top: 8px;
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    p {
+        display: inline-block;
+        font-size: 1.1em;
+    }
+
+    span {
+        @extend p;
+        float: right;
+
+        &.rentalPrice {
+            color: $special;
+            font-weight: 600;
+        }
+    }
+}

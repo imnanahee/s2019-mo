@@ -1,0 +1,140 @@
+@import 'common';
+
+#main {
+    @include inner;  
+}
+
+.box-visual {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub-swiper {
+        .swiper-pagination {
+            width: auto;
+            left: 5%;
+            bottom: 22%;
+        }
+    }
+}
+
+.tab1 {
+    .cell {
+        background-color: #d5e2ea;
+    }
+
+    .category {
+        background-color: #7a99ab;
+    }
+}
+
+.tab2 {
+    .cell {
+        background-color: #e2e5dc;
+    }
+
+    .category {
+        background-color: #8d9870;
+    }
+}
+
+.tab3 {
+    .cell {
+        background-color: #e9e0db;
+    }
+
+    .category {
+        background-color: #a3907f;
+    }
+}
+
+.tab4 {
+    .cell {
+        background-color: #e6e6e3;
+    }
+
+    .category {
+        background-color: #a09d98;
+    }
+}
+
+.best-product {
+    margin: 50px 0;
+    padding: 0 3%;
+
+    h2 {
+        color: $main;
+    }
+
+    .bestProduct-swiper {
+        margin: 30px 0;
+    }
+
+    .product-list {
+        margin: 30px 0;
+
+        .cell {
+            width: 65% !important;
+        }
+    }
+}
+
+.cell {
+    a {
+        display: block;
+    }
+}
+
+.all-product {
+    margin: 40px 0 80px;
+    padding: 0 5%;
+
+    .category-item {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+
+        button {
+            font-size: 1.2em;
+            padding: 2.5%;
+            width: 100%;
+            text-align: center;
+            word-break: keep-all;
+            cursor: pointer;
+
+            &.on {
+                color: $main;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+
+        .cell {
+            width: 47%;
+            position: relative;
+        }
+
+        .desc {
+            @include ellipsis(2);
+            text-align: center;
+        }
+
+        .condition {
+            li {
+                line-height: 15px;
+                margin-bottom: 2%;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

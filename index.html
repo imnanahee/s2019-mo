@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>코웨이 S2019</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/63b8cec292.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="index-page">
+    <header data-include-path="header.html"></header>
+    <main id="main">
+        <section class="box-visual">
+            <div class="visual-left">
+                <div class="swiper main-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/banner_wc.png" alt="당신의 생활을 풍부하게, 웅진코웨이 정수기"></div>
+                    <div class="swiper-slide"><img src="images/banner_ac.png" alt="모든 순간을 청정하게, 웅진코웨이 공기청정기"></div>
+                    <div class="swiper-slide"><img src="images/banner_bc.png" alt="부드럽고 강력한 세정, 웅진코웨이 비데"></div>
+                    <div class="swiper-slide"><img src="images/banner_sc.png" alt="최적화된 수면환경, 웅진코웨이 매트리스"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="care-wrap">
+                    <div class="body-care"><a href="bodyCare.html"><img src="images/main_btn_bc.jpg" alt="비데/연수기"></a></div>
+                    <div class="sleep-care"><a href="sleepCare.html"><img src="images/main_btn_sc.jpg" alt="매트리스"></a></div>
+                </div>
+            </div>
+            <div class="visual-right">
+                <div class="air-care"><a href="airCare.html"><img src="images/main_btn_ac.jpg" alt="공기청정기"></a></div>
+                <div class="water-care"><a href="waterCare.html"><img src="images/main_btn_wc.jpg" alt="정수기"></a></div>
+                <div class="event-page"><a href="javascript:void(0)"><img src="images/main_btn_event.jpg" alt="할인/이벤트"></a></div>
+            </div>
+          </section>
+          <section class="best-product">
+            <h2>COWAY <strong>BEST</strong></h2>
+            <p class="intro">코웨이 고객만족 베스트</p>
+            <ul class="category-menu">
+                <li id="tab1" class="on"><i class="fa-regular fa-droplet fa-lg"></i><p>정수기</p></li>
+                <li id="tab2"><i class="fa-regular fa-wind fa-lg"></i><p>청정기</p></li>
+                <li id="tab3"><i class="fa-sharp fa-regular fa-sprinkler fa-lg"></i><p>비데/연수기</p></li>
+                <li id="tab4"><i class="fa-regular fa-bed fa-lg"></i><p>매트리스</p></li>
+            </ul>
+            <div class="product tab1"></div>
+          </section>
+          <section class="event-wrap">
+            <h2>코웨이에서 만나볼 수 있는 다양한 혜택!</h2>
+            <div class="event1">
+                <img src="images/event_1.jpg" alt="이벤트1">
+                <dl class="event-text">
+                    <dt>01 __</dt>
+                    <dd>코웨이 신규고객이라면 누구나!</dd>
+                    <dd>렌탈등록비 10만원 전액면제</dd>
+                </dl>
+            </div>
+            <div class="event2">
+                <img src="images/event_2.jpg" alt="이벤트2">
+                <dl class="event-text">
+                    <dt>02 __</dt>
+                    <dd>최대 2만원까지 청구할인 및 적립</dd>
+                    <dd>제휴카드 월 렌탈/멤버십 요금 할인</dd>
+                </dl>
+            </div>
+            <div class="event3">
+                <img src="images/event_3.jpg" alt="이벤트3">
+                <dl class="event-text">
+                    <dt>03 __</dt>
+                    <dd>많을수록 더 저렴하게!</dd>
+                    <dd>기업, 학교 등 단체 최대 40% 할인</dd>
+                </dl>
+            </div>
+          </section>
+          <section class="advice-wrap">
+            <div class="consulting">
+                <p>라이프케어 전문가, 웅진코웨이가<br>최고의 서비스와 케어로 보답합니다.</p>
+                <strong>0000-0000</strong>
+                <a href="tel:0000-0000">상담하기</a>
+            </div>
+          </section>
+    </main>
+    <footer data-include-path="footer.html"></footer>
+    <script>
+        var swiper = new Swiper(".main-swiper", {
+            effect: 'fade',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+</html>

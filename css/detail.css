@@ -1,0 +1,747 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+body {
+  margin: 0;
+  font-family: Pretendard, Apple SD Gothic Neo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: Pretendard, Apple SD Gothic Neo, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+}
+
+html, body {
+  height: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, td, th, article, aside, canvas, details, embed, figure, figcaption, #footer, #header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, #footer, #header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  color: #333;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+button {
+  all: unset;
+}
+
+address {
+  font-style: normal;
+}
+
+#header {
+  border-bottom: 1px solid #e0e0e0;
+}
+#header .menu-home {
+  position: fixed;
+  top: 0;
+  left: auto;
+  left: -100vw;
+  width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  background-color: #fff;
+  z-index: 5;
+  -webkit-transition: left 0.3s ease-out;
+  transition: left 0.3s ease-out;
+}
+#header .menu-home.show {
+  left: 0;
+  transition: left 0.3s ease-out;
+}
+#header .menu-home .tab-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#header .menu-top {
+  background-color: #ef891e;
+  padding: 2% 3%;
+  box-sizing: border-box;
+  position: relative;
+}
+#header .menu-top img {
+  width: 95px;
+  height: auto;
+}
+#header .menu-top .srch-wrap {
+  position: relative;
+  margin-top: -10px;
+}
+#header .menu-top #srch-form {
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+#header .menu-top #srch-btn {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  padding: 0 3%;
+  height: 45px;
+  line-height: 45px;
+}
+#header .menu-top .recommend {
+  height: 30px;
+  line-height: 30px;
+}
+#header .menu-top .recommend a {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.9em;
+  margin-right: 3%;
+}
+#header .menu-bottom {
+  position: relative;
+}
+#header .menu-bottom > div {
+  display: flex;
+}
+#header .menu-bottom > div.on p, #header .menu-bottom > div.on .priceWrap span, .priceWrap #header .menu-bottom > div.on span {
+  background: #fff;
+}
+#header .menu-bottom > div.on p i, #header .menu-bottom > div.on .priceWrap span i, .priceWrap #header .menu-bottom > div.on span i {
+  display: none;
+}
+#header .menu-bottom > div:not(.water) .sub-menu {
+  display: none;
+}
+#header .menu-bottom .sub-menu {
+  width: 73%;
+  position: absolute;
+  top: 0;
+  left: 28%;
+}
+#header .menu-bottom .sub-menu a {
+  display: block;
+  margin: 0 20px;
+  padding-left: 20px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95em;
+}
+#header .menu-bottom p, #header .menu-bottom .priceWrap span, .priceWrap #header .menu-bottom span {
+  display: inline-block;
+  font-size: 0.95em;
+  padding-left: 3.5%;
+  background-color: #f2f2f2;
+  width: 25%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+#header .menu-bottom p i, #header .menu-bottom .priceWrap span i, .priceWrap #header .menu-bottom span i {
+  float: right;
+  line-height: 45px;
+  margin-right: 10px;
+}
+#header .menu-list {
+  position: absolute;
+  left: 0;
+  padding: 0 3%;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#header .menu-list > img {
+  width: 30px;
+  padding: 20px 0;
+  vertical-align: middle;
+}
+#header .direct-number {
+  color: #ef891e;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  width: 40%;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+#header .logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+  padding: 0 3%;
+}
+#header .logo a {
+  display: block;
+}
+#header .logo img {
+  width: 100px;
+  vertical-align: middle;
+}
+#header .fixed-menu {
+  display: none;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 0px rgba(42, 42, 42, 0.18);
+}
+#header .fixed-menu.fixed {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#header .fixed-menu .swiper-wrapper {
+  gap: 10px;
+  justify-content: space-between;
+}
+#header .fixed-menu li {
+  width: auto;
+}
+#header .fixed-menu li a {
+  display: block;
+  width: 85px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+#header .fixed-menu .none {
+  color: #e0e0e0;
+}
+
+#footer {
+  background: #ddd;
+  text-align: center;
+  color: #5b5b5b;
+  font-size: 0.9em;
+  padding: 0 0 35px;
+}
+#footer .inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+#footer .grid-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid #ddd;
+  border-width: 1px 0;
+}
+#footer .grid-menu li {
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  color: #e0e0e0;
+}
+#footer .grid-menu li a {
+  display: block;
+}
+#footer .link-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  height: 50px;
+  align-items: center;
+}
+#footer .link-list li {
+  text-align: center;
+}
+#footer .link-list li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 1px;
+  background: #333;
+  margin: 0 10px;
+}
+#footer address {
+  padding: 0 3%;
+}
+#footer address p, #footer address .priceWrap span, .priceWrap #footer address span {
+  line-height: 18px;
+  font-size: 14px;
+  word-break: keep-all;
+}
+
+#footer #footer .b_btn #footer ul li {
+  display: inline-block;
+}
+
+#footer .btn {
+  padding: 15px 0;
+}
+
+#footer .btn li {
+  padding: 0 10px 0 0;
+}
+
+#footer .btn img {
+  width: 78px;
+}
+
+#footer .list {
+  padding: 0 0 10px 0;
+}
+
+#footer .list li {
+  position: relative;
+  padding: 0 20px;
+}
+
+#footer .list li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 2px;
+  height: 12px;
+  background: #44464a;
+}
+
+#footer .list li:first-child a::after {
+  display: none;
+}
+
+#footer .address p, #footer .address .priceWrap span, .priceWrap #footer .address span {
+  line-height: 18px;
+  letter-spacing: -1px;
+  font-size: 0.9em;
+}
+
+#main .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+#main .swiper-pagination-bullet-active {
+  background: #ef891e;
+  opacity: 0.8;
+  width: 20px;
+  border-radius: 10px;
+}
+#main .cell img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 28px;
+}
+
+.category {
+  color: #fff;
+  font-weight: 600;
+  width: 80px;
+  padding: 5px 0;
+  font-size: 0.95em;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto 12px;
+  text-align: center;
+}
+
+.desc {
+  font-size: 1em;
+  line-height: 17px;
+  height: 34px;
+  word-break: keep-all;
+}
+
+.productText {
+  background-color: #fff;
+  padding: 5%;
+  box-sizing: border-box;
+  border: 1px solid #f0f0f0;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.25em;
+  line-height: 25px;
+  padding: 5px 0 3px;
+}
+
+.code {
+  color: #999;
+}
+
+.state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.state strong {
+  background-color: #34b0dd;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 0;
+  font-size: 0.95em;
+}
+.state strong:first-child {
+  border-top-left-radius: 5px;
+}
+.state strong:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.priceWrap {
+  overflow: hidden;
+  margin-top: 8px;
+}
+.priceWrap li {
+  margin-bottom: 8px;
+}
+.priceWrap p, .priceWrap span {
+  display: inline-block;
+  font-size: 1.1em;
+}
+.priceWrap span {
+  float: right;
+}
+.priceWrap span.rentalPrice {
+  color: #34b0dd;
+  font-weight: 600;
+}
+
+.detail-view .inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.detail-view .cell {
+  position: relative;
+  padding-top: 50px;
+}
+.detail-view .cell .state {
+  padding: 3%;
+  box-sizing: border-box;
+}
+.detail-view .cell .name {
+  text-align: center;
+}
+.detail-view .cell h5 {
+  display: inline-block;
+  font-weight: bold;
+  width: 30%;
+  font-size: 1.2em;
+}
+.detail-view .cell .desc {
+  text-align: center;
+  font-size: 1.1em;
+  height: auto;
+}
+.detail-view .cell .category {
+  background-color: #1b2529;
+}
+.detail-view .infoBottom {
+  margin-top: 30px;
+}
+.detail-view .colorWrap {
+  border-top: 1px solid #e0e0e0;
+  padding: 30px 5% 5%;
+  text-align: center;
+}
+.detail-view .colorType {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.detail-view .colorType li {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid #eaecee;
+}
+.detail-view .colorType li.on::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 2px solid #1b2529;
+  width: 31px;
+  height: 31px;
+  background: transparent;
+  border-radius: 50%;
+}
+.detail-view .colorType li.whiteNpink::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 13px;
+  height: 25px;
+  background-color: #c88796;
+  border-radius: 0 100px 100px 0;
+}
+.detail-view .colorType span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+.detail-view .colorList p, .detail-view .colorList .priceWrap span, .priceWrap .detail-view .colorList span {
+  font-size: 1.2em;
+}
+.detail-view .colorList p:not(:first-child), .detail-view .colorList .priceWrap span:not(:first-child), .priceWrap .detail-view .colorList span:not(:first-child) {
+  display: none;
+}
+.detail-view .tabMenuWrap {
+  margin-top: 20px;
+}
+.detail-view .tabMenuWrap .tabMenu {
+  display: flex;
+  box-shadow: 5px -10px 10px -10px rgba(42, 42, 42, 0.18);
+}
+.detail-view .tabMenuWrap .tabMenu li {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #f0f0f0;
+  border-width: 1px 0;
+  color: #d2d2d2;
+}
+.detail-view .tabMenuWrap .tabMenu li.on {
+  background-color: #ef891e;
+  border-color: #ef891e;
+  color: #fff;
+}
+.detail-view .tabMenuWrap .totalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.detail-view .tabMenuWrap .totalPrice .priceWrap span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+.detail-view .tabMenuWrap .totalPrice .purchase {
+  font-size: 1.3em;
+  color: #ef891e;
+}
+.detail-view .tabMenuWrap .inBox {
+  margin-bottom: 15px;
+  position: relative;
+}
+.detail-view .tabMenuWrap .tipContent {
+  position: absolute;
+  top: 5px;
+  background-color: #fff;
+  border: 2px solid #1b2529;
+  border-radius: 5px;
+  padding: 0 15px 15px 15px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.detail-view .tabMenuWrap .tipContent .contClose {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 45px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.detail-view .tabMenuWrap .tipContent dt {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 15px 0 5px;
+}
+.detail-view .tabMenuWrap .tipContent dd {
+  word-break: keep-all;
+  line-height: 20px;
+  font-size: 1.1em;
+}
+.detail-view div[id*=buyType] {
+  display: none;
+  padding: 5% 5% 7%;
+}
+.detail-view div[id*=buyType].on {
+  display: block;
+}
+.detail-view div[id*=buyType] .toolTip {
+  color: #bcbcbc;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.detail-view div[class*=contract] {
+  display: none;
+}
+.detail-view div[class*=contract].on {
+  display: block;
+}
+.detail-view div[class*=contract] p, .detail-view div[class*=contract] .priceWrap span, .priceWrap .detail-view div[class*=contract] span {
+  display: inline-block;
+}
+.detail-view div[class*=contract] p.price, .detail-view div[class*=contract] .priceWrap span.price, .priceWrap .detail-view div[class*=contract] span.price {
+  color: #999;
+  text-decoration: line-through;
+}
+.detail-view div[class*=contract] p.salePrice, .detail-view div[class*=contract] .priceWrap span.salePrice, .priceWrap .detail-view div[class*=contract] span.salePrice {
+  font-size: 1.2em;
+  color: #ef891e;
+}
+.detail-view .mattress .inBox {
+  border-top: 1px solid #e0e0e0;
+  padding: 5%;
+}
+.detail-view .mattress .inBox:first-child p, .detail-view .mattress .inBox:first-child .priceWrap span, .priceWrap .detail-view .mattress .inBox:first-child span {
+  flex-wrap: wrap;
+}
+.detail-view .mattress .inBox:first-child p span, .detail-view .mattress .inBox:first-child .priceWrap span span, .priceWrap .detail-view .mattress .inBox:first-child span span {
+  flex: 1 1 40%;
+}
+.detail-view .inBox {
+  display: flex;
+  align-items: center;
+}
+.detail-view .inBox p, .detail-view .inBox .priceWrap span, .priceWrap .detail-view .inBox span {
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  gap: 15px;
+  font-size: 1.05em;
+}
+.detail-view .inBox p span, .detail-view .inBox .priceWrap span span, .priceWrap .detail-view .inBox span span {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid;
+  border-color: #d6d6d6;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  color: #d6d6d6;
+  cursor: pointer;
+}
+.detail-view .inBox p span.on, .detail-view .inBox .priceWrap span span.on, .priceWrap .detail-view .inBox span span.on {
+  color: #333;
+  border-color: #333;
+  font-weight: bold;
+}
+.detail-view .componentSelect {
+  float: right;
+  position: relative;
+  width: 85%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.detail-view .componentSelect button {
+  width: 100%;
+}
+.detail-view .componentSelect button i {
+  float: right;
+  line-height: 40px;
+}
+.detail-view .componentSelect ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  border: 1px solid #1b2529;
+  border-radius: 5px;
+  width: 90%;
+  padding: 0 9px;
+}
+.detail-view .componentSelect ul.active {
+  display: block;
+  z-index: 1;
+}
+.detail-view .componentSelect ul li {
+  height: 40px;
+  line-height: 40px;
+}
+
+/*# sourceMappingURL=detail.css.map */

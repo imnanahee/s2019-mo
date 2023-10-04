@@ -1,0 +1,253 @@
+@import 'common';
+
+#main {
+    @include inner;
+}
+
+.box-visual {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0 50px;
+    padding: 0 3%;
+
+    .main-swiper {
+        background: transparent;
+        z-index: inherit;
+
+        .swiper-pagination {
+            bottom: 20px;
+            z-index: 2;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    div[class*="care"] {
+        a {
+            display: block;
+        }
+    }
+
+    .visual-left {
+        width: 74%;
+
+        .care-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .visual-right {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+.best-product {
+    margin: 20px 0;
+    padding: 0 3%;
+
+    h2 {
+        color: $main;
+    }
+
+    .intro {
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 28px;
+    }
+
+    .category-menu {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        margin: 30px 0;
+
+        li {
+            width: 65px;
+            padding: 0 2%;
+            cursor: pointer;
+
+            &.on {
+                i {
+                    background-color: $main;
+                    color: $white;
+                }
+
+                p {
+                    color: $main;
+                }
+            }
+
+            i {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                background-color: #f0f0f0;
+                color: #505050;
+                border-radius: 50%;
+            }
+    
+            p {
+                color: #5e5e5e;
+                font-size: 1.1em;
+                font-weight: 600;
+                line-height: 23px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .cell {
+            flex: 1 1 40%;
+            text-align: center;
+            position: relative;
+            padding-bottom: 26%;
+
+            a {
+                display: block;
+            }
+
+            .productText {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .desc {
+                @include ellipsis(2);
+            }
+        }
+
+        &.tab1 {
+            .cell {
+                background-color: #d5e2ea;
+            }
+        }
+
+        &.tab2 {
+            .cell {
+                background-color: #e2e5dc;
+            }
+        }
+
+        &.tab3 {
+            .cell {
+                background-color: #e9e0db;
+            }
+        }
+
+        &.tab4 {
+            .cell {
+                background-color: #e6e6e3;
+            }
+        }
+    }
+}
+
+.event-wrap {
+    margin: 80px 0 30px;
+    padding: 0 3%;
+
+    h2 {
+        @include h2;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    > div {
+        margin-bottom: 15px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    dl {
+        position: absolute;
+        top: 0;
+        padding: 6% 5%;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        dt {
+            color: $main;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        dd:not(:last-child) {
+            color: $main;
+            font-size: 1.2em;
+        }
+
+        dd:last-child {
+            font-weight: 600;
+            font-size: 1.3em;
+            margin-top: 5px;
+        }
+    }
+}
+
+.advice-wrap {
+    @include bg('advice_banner');
+    background-size: contain;
+    width: 100%;
+    height: 0;
+    padding-top: 36.43%;
+    position: relative;
+    
+    .consulting {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        width: calc(100% - 38%);
+        text-align: center;
+        font-size: 1.3em;
+
+        p {
+            font-size: 0.9em;
+            line-height: 20px;
+            margin: 5px 0;
+            color: #000;
+        }
+
+        strong {
+            color: $main;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 0.8em;
+            border: 1px solid #e0e0e0;
+            background-color: $white;
+            padding: 5px 10px;
+            margin-left: 5px;
+            border-radius: 3px;
+            vertical-align: baseline;
+        }
+    }
+}
