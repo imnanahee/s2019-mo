@@ -24,6 +24,29 @@ function rgbToHex(rgb) {
     return `#${Number(values[0]).toString(16).padStart(2, '0')}${Number(values[1]).toString(16).padStart(2, '0')}${Number(values[2]).toString(16).padStart(2, '0')}`;
 }
 
+function searchUrl() {
+    const search = window.location.search;
+    if (search.match(/product_id=2/)) {
+        $('.menu-bottom > div').removeClass('on');
+        $('.menu-bottom .sub-menu').css('display', 'none');
+    
+        $('.menu-bottom .air').addClass('on');
+        $('.air .sub-menu').css('display', 'block');
+    } else if (search.match(/product_id=3/)) {
+        $('.menu-bottom > div').removeClass('on');
+        $('.menu-bottom .sub-menu').css('display', 'none');
+    
+        $('.menu-bottom .body').addClass('on');
+        $('.body .sub-menu').css('display', 'block');
+    } else if (search.match(/product_id=4/)) {
+        $('.menu-bottom > div').removeClass('on');
+        $('.menu-bottom .sub-menu').css('display', 'none');
+    
+        $('.menu-bottom .sleep').addClass('on');
+        $('.sleep .sub-menu').css('display', 'block');
+    }
+}
+
 function commonNavHandler() {
     // nav 메뉴 클릭 시 해당되는 카테고리로 이동하는 공통 함수
     function navigateToCategory(index, category) {

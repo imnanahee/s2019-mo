@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     // URL 매개변수를 추출하는 함수 추가
     $.urlParam = function(name){
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);

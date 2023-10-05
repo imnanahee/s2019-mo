@@ -197,6 +197,12 @@ $(document).ready(function () {
             bestProducts('BEST', '청정기');
             displayAllProducts('청정기');
 
+            $('.menu-bottom > div').removeClass('on');
+            $('.menu-bottom .sub-menu').css('display', 'none');
+
+            $('.menu-bottom .air').addClass('on');
+            $('.air .sub-menu').css('display', 'block');
+
             if (hash.includes('tab2')) {
                 handleTab('tab2', '공기청정기');
             } else if (hash.includes('tab3')) {
@@ -209,6 +215,12 @@ $(document).ready(function () {
             bestProducts('BEST', '비데/연수기');
             displayAllProducts('비데/연수기');
 
+            $('.menu-bottom > div').removeClass('on');
+            $('.menu-bottom .sub-menu').css('display', 'none');
+
+            $('.menu-bottom .body').addClass('on');
+            $('.body .sub-menu').css('display', 'block');
+
             if (hash.includes('tab2')) {
                 handleTab('tab2', '비데');
             } else if (hash.includes('tab3')) {
@@ -218,6 +230,12 @@ $(document).ready(function () {
         } else if ($('body').hasClass('sleep-page')) { // 매트리스 페이지
             bestProducts('BEST', '매트리스/프레임');
             displayAllProducts('매트리스/프레임');
+
+            $('.menu-bottom > div').removeClass('on');
+            $('.menu-bottom .sub-menu').css('display', 'none');
+
+            $('.menu-bottom .sleep').addClass('on');
+            $('.sleep .sub-menu').css('display', 'block');
 
             if (hash.includes('tab2')) {
                 handleTab('tab2', '매트리스');

@@ -7,6 +7,7 @@ $(document).ready(function () {
                 type: 'GET',
                 success: function (response) {
                     $(this).replaceWith(response);
+                    searchUrl();
                     commonNavHandler();
                 }.bind(this)
             });
