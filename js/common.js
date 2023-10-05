@@ -24,13 +24,29 @@ function rgbToHex(rgb) {
     return `#${Number(values[0]).toString(16).padStart(2, '0')}${Number(values[1]).toString(16).padStart(2, '0')}${Number(values[2]).toString(16).padStart(2, '0')}`;
 }
 
-// nav 메뉴 클릭 시 해당되는 카테고리로 이동하는 공통 함수
-function navigateToCategory(index, category) {
-    const cate = category[index];
-    const subURL = `${window.location.pathname}#${encodeURIComponent(cate)}`;
-    window.location.href = subURL;
-    location.reload();
+function commonNavHandler() {
+    // nav 메뉴 클릭 시 해당되는 카테고리로 이동하는 공통 함수
+    function navigateToCategory(index, category) {
+        const cate = category[index];
+        const subURL = `${window.location.pathname}#${encodeURIComponent(cate)}`;
+        window.location.href = subURL;
+        location.reload();
+    }
+
+    // 각각의 메뉴에 대한 이벤트 핸들러 등록
+    $('.menu-bottom > div').each(function(menuIndex, menuElement) {
+        var linkList = $(menuElement).find('a:not(:first-child)');
+        linkList.each(function(linkIndex, linkElement) {
+            $(linkElement).on('click', function() {
+                console.log(menuIndex); console.log(linkIndex);
+                var categoryLists = [['tab2', 'tab3', 'tab4', 'tab5'], ['tab2', 'tab3', 'tab4'], ['tab2', 'tab3'], ['tab2', 'tab3']];
+                var selectedCategories = categoryLists[menuIndex];
+                navigateToCategory(linkIndex, selectedCategories);
+            })
+        })
+    });
 }
+
 
 // 검색 기능 실행
 function performSearch() {
@@ -114,17 +130,5 @@ $(function() {
         if (e.key === 'Enter') {
             performSearch();
         }
-    });
-
-    $('.menu-bottom > div').each(function(menuIndex, menuElement) {
-        var linkList = $(menuElement).find('a:not(:first-child)');
-        linkList.each(function(linkIndex, linkElement) {
-            $(linkElement).on('click', function() {
-                console.log(menuIndex); console.log(linkIndex);
-                var categoryLists = [['tab2', 'tab3', 'tab4', 'tab5'], ['tab2', 'tab3', 'tab4'], ['tab2', 'tab3'], ['tab2', 'tab3']];
-                var selectedCategories = categoryLists[menuIndex];
-                navigateToCategory(linkIndex, selectedCategories);
-            })
-        })
     });
 })
