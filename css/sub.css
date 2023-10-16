@@ -538,6 +538,10 @@ h2 {
   display: block;
 }
 
+.phone-consulting img {
+  width: 100%;
+}
+
 .all-product {
   margin: 40px 0 80px;
   padding: 0 5%;
