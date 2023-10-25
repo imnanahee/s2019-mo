@@ -58,10 +58,10 @@ function commonNavHandler() {
 
     // 각각의 메뉴에 대한 이벤트 핸들러 등록
     $('.menu-bottom > div').each(function(menuIndex, menuElement) {
-        var linkList = $(menuElement).find('a:not(:first-child)');
+        var linkList = $(menuElement).find('a:not(:first-child)'); // 전체보기 메뉴 제외
         linkList.each(function(linkIndex, linkElement) {
             $(linkElement).on('click', function() {
-                console.log(menuIndex); console.log(linkIndex);
+                // console.log(menuIndex); console.log(linkIndex);
                 var categoryLists = [['tab2', 'tab3', 'tab4', 'tab5'], ['tab2', 'tab3', 'tab4'], ['tab2', 'tab3'], ['tab2', 'tab3']];
                 var selectedCategories = categoryLists[menuIndex];
                 navigateToCategory(linkIndex, selectedCategories);
@@ -94,7 +94,7 @@ $(function() {
         freeMode: true,
     });
 
-    var gnb_swiper = new Swiper('.bestProduct-swiper', {
+    var best_swiper = new Swiper('.bestProduct-swiper', {
         slidesPerView: 'auto',
         freeMode: true,
         spaceBetween: 15,

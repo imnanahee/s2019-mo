@@ -290,7 +290,7 @@ $(document).ready(function () {
             })
 
             // toolTip외 body 클릭 시 닫기
-            $(document.body).on('click', function(e) {
+            $('body').on('click', function(e) {
                 var target = $(e.target);
                 if (
                     target.hasClass('tipContent') ||
